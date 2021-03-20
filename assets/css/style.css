@@ -5535,7 +5535,7 @@ table p {
 }
 
 .causes-page-wrapper .causes-area.causes-default-area {
-  padding: 148px 0 152px;
+  padding: 148px 0 52px;
 }
 @media only screen and (max-width: 1199px) {
   .causes-page-wrapper .causes-area.causes-default-area {
@@ -6883,7 +6883,7 @@ table p {
 
 .funfact-items-style1 .funfact-item {
   border-left: 1px solid #eaecec;
-  padding: 140px 0 143px;
+  padding: 40px 0 43px;
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
