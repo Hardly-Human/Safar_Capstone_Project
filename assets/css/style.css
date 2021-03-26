@@ -1491,51 +1491,82 @@ table p {
 }
 
 /*-------- Preloader Style Css --------*/
-.preloader-deactive .preloader-wrap {
-  display: none;
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    background: #ffffff;
+    top: 0;
+    left: 0;
 }
 
-.preloader-wrap {
-  background-color: #fff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 99999;
-  overflow: hidden;
+.loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    right: 0;
+    transform: translateY(-43%);
+    text-align: center;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
 }
-.preloader-wrap .preloader {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  margin-left: -32px;
-  margin-top: -50px;
+.box {
+    width: 100%;
+    height: 100%;
+    background: #fea444;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
 }
-.preloader-wrap .preloader .dot {
-  height: 100%;
-  width: 100%;
-  display: block;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-  animation: la-rotateplane 1.2s infinite ease-in-out;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #fc6539;
+.shadow { 
+    width: 100%;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+    }
+
+
+@keyframes loader {
+    0% {
+        left: -100px
+    }
+    100% {
+        left: 110%;
+    }
 }
-@keyframes la-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
+
+@keyframes animate {
+    17% {
+        border-bottom-right-radius: 3px;
+    }
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+    50% {
+        transform: translateY(18px) scale(1,.9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes shadow {
+    50% {
+        transform: scale(1.2,1);
+    }
 }
 /*-------- Custom Font Style Css --------*/
 .font-size-12 {

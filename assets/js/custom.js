@@ -3,9 +3,18 @@
   "use strict";
 
   // Preloader
-  function stylePreloader() {
-    $('body').addClass('preloader-deactive');
-  }
+  (function($) {
+    "use strict";
+
+    jQuery(document).ready(function($) {
+
+    });
+
+    jQuery(window).load(function() {
+        $(".preloader").fadeOut("slow"); 
+    });
+
+}(jQuery));
 
   // Background Image
   $('[data-bg-img]').each(function() {
